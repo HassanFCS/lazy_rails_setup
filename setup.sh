@@ -17,7 +17,7 @@ gpg2 --keyserver hkp://keyserver.ubuntu.com --recv-keys 409B6B1796C275462A170311
 
 echo "Setting up rvm.sh..."
 \curl -sSL https://get.rvm.io -o rvm.sh
-cat rvm.sh | bash -s stable --rails
+cat rvm.sh | bash -s stable
 source ~/.rvm/scripts/rvm
 
 echo "Setting up yarn..."
@@ -34,4 +34,7 @@ echo "Installing Postgres, RVM and Yarn..."
 sudo apt install -y postgresql postgresql-contrib libpq-dev software-properties-common rvm yarn
 
 echo "Reloading bash config..."
-echo 'source ~/.bashrc'
+source ~/.bashrc
+
+echo "Installling Rails 6..."
+gem install rails -v 6.1
